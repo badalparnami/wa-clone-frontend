@@ -84,7 +84,7 @@ function App() {
       setUserDetails((ud) => ({ ...ud, ...response }));
 
       if (!socket.current) {
-        socket.current = io("http://localhost:8080");
+        socket.current = io("https://wa-web-clone.herokuapp.com");
       }
 
       if (socket.current) {
