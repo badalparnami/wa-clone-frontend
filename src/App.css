@@ -33,7 +33,7 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .app__mobile-message {
     padding-top: 200px;
     text-align: center;
@@ -41,7 +41,7 @@
     display: block;
   }
   .app-content {
-    display: none;
+    display: none !important;
   }
 }
 
