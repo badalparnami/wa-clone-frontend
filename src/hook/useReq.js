@@ -74,15 +74,18 @@ const useReq = () => {
           } else if (err.response.status === 404) {
             history.push("/404");
           } else {
+            setError(err.response.data.message);
             ctx &&
               typeof ctx.showAlert === "function" &&
               ctx.showAlert(err.response.data.message);
           }
         } else if (err.request) {
+          setError("Slow Network Speed. Try Again later.");
           ctx &&
             typeof ctx.showAlert === "function" &&
             ctx.showAlert("Slow Network Speed. Try Again later.");
         } else {
+          setError("Oops!! Unusual error occurred");
           ctx &&
             typeof ctx.showAlert === "function" &&
             ctx.showAlert("Oops!! Unusual error occurred");
