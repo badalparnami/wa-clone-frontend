@@ -71,7 +71,6 @@ function App() {
     if (showLoader) {
       if (loading) {
         setStartLoadProgress(true);
-        setShowLoader(false);
       } else if (loading === false) {
         setAppLoaded(true);
         setShowLoader(false);
@@ -84,7 +83,7 @@ function App() {
       setUserDetails((ud) => ({ ...ud, ...response }));
 
       if (!socket.current) {
-        socket.current = io("https://wa-web-clone.herokuapp.com");
+        socket.current = io(process.env.REACT_APP_SOCKETIO);
       }
 
       if (socket.current) {
