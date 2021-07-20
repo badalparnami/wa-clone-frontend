@@ -213,16 +213,16 @@
 
 /*  End Sidebar Contact List */
 
-@media screen and (min-width: 1000px) and (max-width: 1300px) {
+/* @media screen and (min-width: 1000px) and (max-width: 1300px) {
   .sidebar {
     flex: 35%;
   }
   .sidebar ~ div {
     flex: 65%;
   }
-}
+} */
 
-@media screen and (min-width: 1301px) {
+@media screen and (min-width: 1000px) {
   .sidebar {
     flex: 30%;
   }
